@@ -44,8 +44,8 @@ input {
 #categories {
     width: 300px;
     border-radius: 25px;
-    
 }
+
 #date {
     width: 300px;
     border-radius: 25px;
@@ -62,4 +62,9 @@ textarea {
 #submit {
     background: #C7CEEA;
 }
+
+#login {
+    background: #FFB7B2;
+}
+
 
