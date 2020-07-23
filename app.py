@@ -26,26 +26,33 @@ app.config['MONGO_DBNAME'] = 'planner'
 
 # URI of database
 # URI of database
-app.config['MONGO_URI'] = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0-7bt79.mongodb.net/test?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0.oesft.mongodb.net/planner?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
 # -- Routes section --
 @app.route('/')
 
-@app.route('/login', methods = ['GET', 'POST'])
-def login():
+@app.route('/index', methods = ['GET', 'POST'])
+def index():
     # return render_template("login.html", time=datetime.now())
     if request.method == "GET":
-        return render_template("login.html", time=datetime.now())
+        return render_template("index.html", time=datetime.now())
     else:
         username = request.form['username']
         #connect to a database
         events = mongo.db.events
         # add to the data base
-        events.insert({'username': username})
+        # events.insert({'username': username})
         return redirect('/')
 
-@app.route('/index')
-def index():
-    return render_template("index.html", time=datetime.now())
+@app.route('/input', methods = ['GET', 'POST'])
+def input():
+    if request.method == "POST":
+        username = request.form['username']
+        print(username)
+        #connect to a database
+        events = mongo.db.events
+        # add to the data base
+        events.insert({'username': username})
+    return render_template("input.html", time=datetime.now())
