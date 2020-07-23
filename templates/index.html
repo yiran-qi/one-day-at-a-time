@@ -1,38 +1,24 @@
 <html>
 
 <head>
-
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import boostrap.css-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="static/css/styles.css?q={{ time }}" />
+	<title>Login</title>
 
-	<title>Planner</title>
 </head>
 
 <body>
 	<h1>Welcome to Your Planner!</h1>
-	<h2>What would you like to insert into your calendar?</h2><br><br>
-	<form method="post" action="/planner" class="form">
-		<label for="title">What would you like to call your entry?</label><br>
-		<input id="title" type="text" name="title" placeholder=""/><br><br>
-		<label for="entry_date">Categories</label><br>
-		<input list="categories" name="categories"><br><br>
-		<datalist id="categories">
-			<option value="Assignments">
-            <option value="Birthdays">
-            <option value="Classes">
-			<option value="Extra Curriculars">
-            <option value="Socials">
-		</datalist>
-		<label for="entry_date">Date</label><br>
-		<input id="date" type="date" name="entry_date" value=""><br><br>
-		<label for="notes">Notes</label><br>
-		<textarea id="notes" name="notes" placeholder="Notes" ></textarea> <br> <br>
-		<input id="submit" type="submit" value="Submit"/>
-	</form>
+	<h2>Login to access your planner</h2> <br><br>
+	<form action="/input" method="POST">
+		<label for="username">Username</label><br>
+		<input id= "username" type="text" name="username" placeholder=""/><br><br>
+		<input id="login" type="submit" value="Login"/>
+        </form>
 </body>
 
 </html>
