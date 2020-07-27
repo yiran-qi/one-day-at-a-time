@@ -1,4 +1,6 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
+
+/* @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 400;
@@ -21,27 +23,32 @@
   font-style: normal;
   font-weight: 400;
   src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype');
-}
+} */
 .txt__normal {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400px;
+  color: black;
 }
 .txt__normal--it {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400px;
+  color: black;
+
 }
 .txt__bold {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400px;
+    color: black;
 }
 .txt__bold--it {
-  font-family: 'Lato', sans-serif;
-  font-weight: 200;
-  font-style: italic;
+  font-family: 'Staatliches', cursive;
+  font-weight: 400px;
+  color: black;
 }
 .txt__awesome {
-  font: normal normal normal 14px/1 FontAwesome;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  color: black;
 }
 /* VARIABLES ================================================*/
 /* RESPONSIVE ================================================*/
@@ -58,15 +65,15 @@ body.overlay:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFEFE9;
+  background-color: #FFF4EC;
   z-index: 100;
 }
 html {
   height: 100%;
-  background: #FFE1CD;
-  color: #FFEFE9;
-  font-size: 13px;
-  font-family: 'Lato', sans-serif;
+  background: #FFF4EC;
+  color: black;
+  font-size: 20px;
+  font-family: 'Staatliches', cursive;
   font-weight: 400;
 }
 .wrapper {
@@ -117,7 +124,7 @@ header {
   height: 80px;
   width: 100%;
   z-index: 50;
-  background: #FFE1CD;
+  background: #FFF4EC;
 }
 header > .wrapper {
   display: -webkit-box;
@@ -135,7 +142,7 @@ header > .wrapper {
   font-size: 13px;
 }
 header > .wrapper a {
-  color: #ffffff;
+  color: #FFF4EC;
   text-decoration: none;
   margin-left: 10px;
 }
@@ -208,7 +215,7 @@ header > .wrapper a {
   width: 30px;
   height: 30px;
   padding: 9px 12px;
-  background-color: #FFE1CD;
+  background-color: #FFF4EC;
   cursor: pointer;
   z-index: 10;
   box-sizing: border-box;
@@ -236,14 +243,14 @@ header > .wrapper a {
 }
 .c-month .prev:hover {
   padding: 9px 10px;
-  background-color: #FFE1CD;
+  background-color: #FFF4EC;
 }
 .c-month .next {
   right: 0;
 }
 .c-month .next:hover {
   padding: 9px 14px;
-  background-color: #FFE1CD;
+  background-color: #FFF4EC;
 }
 .c-paginator__year {
   height: 80px;
@@ -255,7 +262,7 @@ header > .wrapper a {
   padding: 0 10px;
   line-height: 30px;
   height: 30px;
-  background-color: white;
+  background-color: #FFF4EC;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 15px;
@@ -275,7 +282,7 @@ header > .wrapper a {
   margin-left: 10px;
 }
 .o-btn:hover {
-  background-color: #FFE1CD;
+  background-color: #FFF4EC;
 }
 .c-calendar {
   padding-top: 80px;
@@ -288,7 +295,7 @@ header > .wrapper a {
           flex-direction: row;
 }
 .c-calendar__style {
-  background-color: #FFE1CD;
+  background-color: #FFDAC1;
   margin: 20px;
   padding: 10px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
@@ -383,7 +390,7 @@ header > .wrapper a {
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background: #FFE1CD;
+  background: #FFF4EC;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -400,28 +407,28 @@ header > .wrapper a {
   background: #f6e7e6;
 }
 .c-cal__cel:nth-child(7) p {
-  background: #FFE1CD;
+  background: #FFF4EC;
 }
 .c-cal__cel:hover {
-  background-color: #f6e7e6;
+  background-color: #FFDAC1;
 }
 .c-cal__cel:hover p {
-  background: #FFE1CD;
+  background: #FFFBF9;
 }
 .c-cal__cel.isSelected {
-  background-color: #FFE1CD;
+  background-color: #FFDAC1;
 }
 .c-cal__cel.isSelected p {
-  background: #FFE1CD;
+  background: #FFF4EC;
 }
 .c-cal__cel.isToday {
-  background-color: #f6e7e6;
+  background-color: #FFDAC1;
 }
 .c-cal__cel.isToday p {
-  background: #FFEFE9;
+  background: #FFDAC1;
 }
 .c-cal__cel.other_month {
-  color: rgba(255, 255, 255, 0.2);
+  color: #FFF4EC;
 }
 .event:before {
   position: absolute;
@@ -429,7 +436,7 @@ header > .wrapper a {
   display: block;
   width: 10px;
   height: 10px;
-  background-color: #FFEFE9;
+  background-color: #FFF4EC;
   z-index: 10;
   padding: 0;
   top: 50%;
@@ -457,7 +464,7 @@ header > .wrapper a {
   margin: 50px 0;
 }
 .c-aside__day .c-aside__num {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Staatliches', cursive;
   font-weight: 900;
 }
 .c-aside__event {
@@ -472,7 +479,7 @@ header > .wrapper a {
   width: 16px;
   height: 16px;
   left: 0;
-  background-color: #FFEFE9;
+  background-color: #FFDAC1;
   border-radius: 50%;
   -webkit-border-radius: 50%;
 }
