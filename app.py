@@ -26,7 +26,7 @@ app.config['MONGO_DBNAME'] = 'planner'
 
 # URI of database
 # URI of database
-app.config['MONGO_URI'] = f'mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0.oesft.mongodb.net/planner?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = "mongodb+srv://admin:n5px7GtOCXDYq7Y7@cluster0.sw1ze.mongodb.net/planner?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
 
@@ -56,3 +56,13 @@ def input():
         # add to the data base
         events.insert({'username': username})
     return render_template("input.html", time=datetime.now())
+
+@app.route("/calendar",  methods = ['GET', 'POST'])
+def calendar():
+    if request.method == "POST":
+        title = request.form["title"]
+        #connect to a database
+        events = mongo.db.events
+        # add to the data base
+        events.insert({'title': title})
+    return render_template('calendar.html')
