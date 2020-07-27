@@ -46,6 +46,19 @@ def index():
         # events.insert({'username': username})
         return redirect('/')
 
+@app.route("/calendar",  methods = ['GET', 'POST'])
+def calendar():
+    if request.method == "GET":
+        return render_template('input.html', time=datetime.now())
+        
+    else:
+        title = request.form["title"]
+        #connect to a database
+        events = mongo.db.events
+        # add to the data base
+        events.insert({'title': title})
+        return render_template('calendar.html', time=datetime.now())
+
 @app.route('/input', methods = ['GET', 'POST'])
 def input():
     if request.method == "POST":
@@ -57,12 +70,5 @@ def input():
         events.insert({'username': username})
     return render_template("input.html", time=datetime.now())
 
-@app.route("/calendar",  methods = ['GET', 'POST'])
-def calendar():
-    if request.method == "POST":
-        title = request.form["title"]
-        #connect to a database
-        events = mongo.db.events
-        # add to the data base
-        events.insert({'title': title})
-    return render_template('calendar.html')
+
+
