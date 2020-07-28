@@ -119,14 +119,16 @@ function fill_table(month, month_length, indexMonth) {
 				<span class="c-paginator__year">2020</span>
 			</div>
 			<div class="c-sort">
-				<a class="o-btn c-today__btn" href="javascript:;">TODAY</a>
+				<!-- <a class="o-btn c-today__btn" href="javascript:;">TODAY</a> -->
 			</div>
 		</div>
 	</header>
 	<div class="wrapper">
 		<div class="c-calendar">
 			<div class="c-calendar__style c-aside">
-				<button class="c-add o-btn js-event__add" > Add Event <span class="fa fa-plus"></span></a></button>
+                <form action="/form" method="post">
+				    <button class="c-add o-btn js-event__add" > Add Event <span class="fa fa-plus"></span></a></button>
+                </form>
 				<div class="c-aside__day">
 					<span class="c-aside__month"></span> <span class="c-aside__num"></span>
 				</div>
