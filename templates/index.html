@@ -1,24 +1,165 @@
-<html>
+<!-- <html>
 
-<head>
+<head> -->
 	<!--Import Google Icon Font-->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 	<!--Import boostrap.css-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="static/css/styles.css?q={{ time }}" />
 	<title>Login</title>
 
-</head>
+</head> -->
 
-<body>
+<!-- <body>
 	<h1>Welcome to Your Planner!</h1>
 	<h2>Login to access your planner</h2> <br><br>
 	<form action="/input" method="POST">
 		<label for="username">Username</label><br>
 		<input id= "username" type="text" name="username" placeholder=""/><br><br>
 		<input id="login" type="submit" value="Login"/>
-        </form>
-</body>
+        </form> -->
+<!-- </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css?q={{ time }}">
+    
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link href="https://www.fontify.me/wf/d0acbe4e5cbed54cd736038e22b5bccc" rel="stylesheet" type="text/css">
+    <link href="https://www.fontify.me/wf/4610b28c71f00b257c0a40c44b669fa8" rel="stylesheet" type="text/css">
+    <link href="https://www.fontify.me/wf/c08bdf0fec6d115ca38440da855b2c1f" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+    <!-- <div class="container">
+        <div class="row" id="short">
+            <div class="col-sm-3">
+                <p class="unitedstates">UNITED STATES</p>
+            </div>
+            <div class="col-sm-3">
+                <p class="investor">INVESTOR RELATIONS</p>
+            </div>
+            <div class="col-sm-2">
+                <p class="contact">CONTACT US</p>
+            </div>
+            <div class="col-sm-2">
+                <p class="careers">CAREERS</p>
+            </div>
+            <div class="col-sm-2">
+                <p class="client">CLIENT LOGIN</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="https://www.jpmorgan.com/country/US/EN/about">About Us</a>
+            </div>
+            <div class="col-sm-4" id="dark-blue">
+                <p class="button2">Insights</p>
+            </div>
+            <div class="col-sm-4">
+                <p class="button3">Solutions</p>
+            </div>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="hero-image" id="backgroun">
+        <div class="card" style="width: 32rem;">
+            <div class="card-body">
+                <h3 class="card-title">Welcome to Your Planner!</h3>
+                <p></p>
+                <p class="card-text">Signup below to access your planner</p>
+                <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Signup</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Login</a>
+                </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div style="line-height:150%;">
+                        <br>
+                    </div>
+                    <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="name" class="form-control" name="name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I'm Not a Robot</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div style="line-height:150%;">
+                        <br>
+                    </div>
+                    <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="name">Username</label>
+                        <input type="name" class="form-control" name="name" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I'm Not a Robot</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>
