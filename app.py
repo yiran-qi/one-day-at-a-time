@@ -27,7 +27,6 @@ MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
 app.config['MONGO_DBNAME'] = 'planner'
 
 # URI of database
-# URI of database
 app.config['MONGO_URI'] = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0.sw1ze.mongodb.net/planner?retryWrites=true&w=majority"
 
 mongo = PyMongo(app)
@@ -37,24 +36,13 @@ mongo = PyMongo(app)
 
 @app.route('/index', methods = ['GET', 'POST'])
 def index():
-    # return render_template("login.html", time=datetime.now())
-    if request.method == "GET":
-        return render_template("index.html", time=datetime.now())
-    else:
-        username = request.form['username']
-        #connect to a database
-        events = mongo.db.events
-        # add to the data base
+    return render_template("index.html", time=datetime.now())
 
-        # events.insert({'username': username})
-        return redirect('/')
-
-   
 @app.route("/signup", methods = ["GET", "POST"])
 def signup():
     users = mongo.db.users
     hashpass = bcrypt.hashpw(request.form['password'].encode('utf-8'), bcrypt.gensalt())
-    users.insert({"name": request.form["name"], "username": request.form["username"], "password": str(hashpass, "utf-8")})
+    users.insert({"name": request.form["name"], "username": request.form["username"], "password": str(object= hashpass, encoding='utf-8')})
     session["user"] = request.form["name"]
     return render_template("input.html", time=datetime.now())
 
@@ -66,30 +54,27 @@ def login():
         if login_user:
             if bcrypt.hashpw(request.form['password'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
                 session['user'] = request.form['name']
-                return render_template("input.html", time=datetime.now())
+                return render_template("calendar.html", time=datetime.now())
         # if no successful match, display an error 
         return "Unsuccessful username/password log in attempt"
 
-@app.route("/calendar",  methods = ['GET', 'POST'])
+@app.route('/calendar', methods = ['GET', 'POST'])
 def calendar():
-    if request.method == "POST":
-        # title = request.form["title"]
-        # #connect to a database
-        # events = mongo.db.events
-        # # add to the data base
-        # events.insert({'title': title})
-        return render_template('calendar.html', time=datetime.now())
-
-@app.route('/input', methods = ['GET', 'POST'])
-def input():
-    if request.method == "POST":
-        username = request.form['username']
-        print(username)
-        #connect to a database
+    if request.method == "GET":
+        return render_template("calendar.html", time=datetime.now())
+    else:
+        title = request.form["title"]
+        categories = request.form["categories"]
+        entry_date = request.form["entry_date"]
+        notes = request.form["notes"]
+        username = mongo.db.users["username"]
+        # Connect to a database
         events = mongo.db.events
-        # add to the data base
-        events.insert({'username': username})
-    return render_template("input.html", time=datetime.now())
+        collection = events.find({})
+        # Add to the database
+        events.insert({"username": username, "title": title, "categories": categories, "entry_date": entry_date, "notes": notes})
+        # Return data to user
+        return render_template("calendar.html", collection=collection, time=datetime.now())
 
 @app.route("/form", methods=['POST'])
 def form():
