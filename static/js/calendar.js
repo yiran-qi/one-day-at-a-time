@@ -106,10 +106,10 @@
 //     }
 //   });
 
-//   winCreator.removeClass("isVisible");
-//   $("body").removeClass("overlay");
-//   $("#addEvent")[0].reset();
-// });
+  winCreator.removeClass("isVisible");
+  $("body").removeClass("overlay");
+  $("#form")[0].reset();
+});
 
 // //fill sidebar event info
 // function fillEventSidebar(self) {
