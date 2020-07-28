@@ -45,8 +45,10 @@ def index():
         #connect to a database
         events = mongo.db.events
         # add to the data base
-        events.insert({'username': username})
+
+        # events.insert({'username': username})
         return redirect('/')
+
    
 @app.route("/signup", methods = ["GET", "POST"])
 def signup():
@@ -68,16 +70,27 @@ def login():
         # if no successful match, display an error 
         return "Unsuccessful username/password log in attempt"
 
-@app.route('/calendar', methods = ['GET', 'POST'])
+@app.route("/calendar",  methods = ['GET', 'POST'])
 def calendar():
-    # if request.method == "POST":
-        # # add to the data base
-        # name = request.form["name"]
-        # date = request.form["date"]
-        # notes = request.form["notes"]
-        # tags = request.form["tags"]
+    if request.method == "POST":
+        # title = request.form["title"]
         # #connect to a database
         # events = mongo.db.events
         # # add to the data base
-        # events.insert({"name": name, "date": date, "notes": notes, "tags": tags})
-    return render_template("calendar.html", time=datetime.now())
+        # events.insert({'title': title})
+        return render_template('calendar.html', time=datetime.now())
+
+@app.route('/input', methods = ['GET', 'POST'])
+def input():
+    if request.method == "POST":
+        username = request.form['username']
+        print(username)
+        #connect to a database
+        events = mongo.db.events
+        # add to the data base
+        events.insert({'username': username})
+    return render_template("input.html", time=datetime.now())
+
+@app.route("/form", methods=['POST'])
+def form():
+    return render_template("input.html", time=datetime.now())
