@@ -47,7 +47,7 @@ def index():
         # add to the data base
         events.insert({'username': username})
         return redirect('/')
-
+   
 @app.route("/signup", methods = ["GET", "POST"])
 def signup():
     users = mongo.db.users
