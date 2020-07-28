@@ -108,7 +108,7 @@ saveBtn.on("click", function() {
 
   winCreator.removeClass("isVisible");
   $("body").removeClass("overlay");
-  $("#addEvent")[0].reset();
+  $("#form")[0].reset();
 });
 
 //fill sidebar event info
