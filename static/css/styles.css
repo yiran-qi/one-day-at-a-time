@@ -1,70 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
 
-body {
-  padding: 35px;
-  text-align: center;
-  background-color: #FFEFE9;
+body, html {
+    height: 100%;
 }
 
-h1 {
-  text-align: center;
-  font-size: 100px;
-  font-family: 'Staatliches', cursive;
-  font-weight: bold;
+
+.row {
+    background-color: #00477b;
+    transform: translate(200px, 0px);
+    width: 55rem;
+    margin-bottom: 0.8em;
 }
 
-h2 {
-    font-size: 40px;
-    font-family: 'Staatliches', cursive;
+.col-sm-1 {
+    font-family: font90686;
+    font-size: 12px;
+    color: black;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-form {
-  text-align: center;
-  font-family: 'Lato', sans-serif;  
-  font-size: 20px;
+.col-sm-2 {
+    font-family: font90686;
+    font-size: 12px;
+    color: black;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-label {
-    font-size: 25px;
+.col-sm-3 {
+    font-family: font90686;
+    font-size: 12px;
+    color: black;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-input {
+.col-sm-4 {
+    font-family: font90686;
+    font-size: 16px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+
+}
+
+#short {
+    background-color: white;
+    text-align: left;
+    height: 0;
+}
+
+.container {
+    font-size: 50px;
+    padding: 10px;
     text-align: center;
-    width: 300px;
-    border-radius: 20px;
-    background: #FFDAC1;
 }
 
-#title {
-    width: 300px;
-    border-radius: 25px;
-    background: #FFB7B2;
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("/static/images/background.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: 200px -15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-#categories {
-    width: 300px;
-    border-radius: 25px;
+.card {
+  margin-left: 10px;
+  padding: 15px;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  opacity: 0.9;
 }
 
-#date {
-    width: 300px;
-    border-radius: 25px;
-    background: #E2F0CB;
+.card-title {
+    font-family: 'Staatliches', cursive;;
+    font-size: 50px;
+    color: #6f6f6f;
+    line-height: 1.1em;
 }
 
-textarea {
-    width: 300px;
-    border-radius: 25px;
-    background: #B5EAD7;
-    text-align: center;
+.card-text {
+    font-family: arial;
+    font-size: 16px;
+    color: #6f6f6f;
+    line-height: 1.18em;
+    margin-bottom: 2em;
 }
 
-#submit {
-    background: #C7CEEA;
+.btn btn-primary {
+    background-color: red;
 }
-
-#login {
-    background: #FFB7B2;
-}
-
-

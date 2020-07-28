@@ -2,12 +2,11 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>Calendar</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
-    <link rel="stylesheet" type="text/css" href="static/css/Calendar3.css?q={{ time }}" />
-	
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+    <link rel="stylesheet" type="text/css" href="static/css/calendar.css?q={{ time }}">
 </head>
 
 <body>
@@ -144,7 +143,7 @@ function fill_table(month, month_length, indexMonth) {
       today = new Date("January 1, " + year);
       start_day = today.getDay() + 1;
       fill_table("January", 31, "01");
-      fill_table("February", 28, "02");
+      fill_table("February", 29, "02");
       fill_table("March", 31, "03");
       fill_table("April", 30, "04");
       fill_table("May", 31, "05");
@@ -159,20 +158,20 @@ function fill_table(month, month_length, indexMonth) {
 			</div>
 		</div>
 
-		<!-- <div class="c-event__creator c-calendar__style js-event__creator"> -->
-			<!-- <a href="javascript:;" class="o-btn js-event__close">CLOSE <span class="fa fa-close"></span></a> -->
-			<!-- <form id="addEvent">
-				<input placeholder="Event Name" type="text" name="name">
-				<input type="date" name="date">
-				<textarea placeholder="Notes" name="notes" cols="30" rows="10"></textarea>
-				<select name="tags">
+  <div class="c-event__creator c-calendar__style js-event__creator">
+    <a href="javascript:;" class="o-btn js-event__close">CLOSE<span class="fa fa-close"></span></a>
+    <form action="/calendar" method="POST" id="form">
+      <input placeholder="Event Name" type="text" name="name">
+      <input type="date" name="date">
+      <textarea placeholder="Notes" name="notes" cols="30" rows="10"></textarea>
+      <select name="tags">
           <option value="Class">Class</option>
           <option value="Assignment">Assignment</option>
           <option value="Extracurricular">Extracurricular</option>
           <option value="Social">Social</option>
           <option value="Birthday">Birthday</option>
         </select>
-			</form> -->
+			</form>
 			<br>
 			<!-- <a href="javascript:;" class="o-btn js-event__save">SAVE<span class="fa fa-save"></span></a> -->
 		</div>

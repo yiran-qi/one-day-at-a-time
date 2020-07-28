@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
+
+body {
+  padding: 35px;
+  text-align: center;
+  background-color: #FFEFE9;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: 'Staatliches', cursive;
+}
+
+form {
+  text-align: center;
+  font-family: 'Lato', sans-serif;  
+  font-size: 20px;
+}
+
+label {
+    font-size: 25px;
+}
+
+input {
+    text-align: center;
+    width: 300px;
+    border-radius: 20px;
+    background: #FFDAC1;
+}
+
+#title {
+    width: 300px;
+    border-radius: 25px;
+    background: #FFB7B2;
+}
+
+#categories {
+    width: 300px;
+    border-radius: 25px;
+}
+
+#date {
+    width: 300px;
+    border-radius: 25px;
+    background: #E2F0CB;
+}
+
+textarea {
+    width: 300px;
+    border-radius: 25px;
+    background: #B5EAD7;
+    text-align: center;
+}
+
+#submit {
+    background: #C7CEEA;
+}
+
+#login {
+    background: #FFB7B2;
+}
+
