@@ -65,15 +65,14 @@ def calendar():
         categories = request.form["categories"]
         entry_date = request.form["entry_date"]
         notes = request.form["notes"]
-        username = mongo.db.users["username"]
+        # username = mongo.db.users["username"]
         # Connect to a database
         events = mongo.db.events
         # if "user" in session:
         #     collection.find({"name": session["user"]})
         collection = events.find({})
         # Add to the database
-        events.insert({"title": title, "categories": categories,
-                       "entry_date": entry_date, "notes": notes})
+        events.insert({"title": title, "categories": categories, "entry_date": entry_date, "notes": notes})
         # Return data to user
         return render_template("calendar.html", collection=collection, time=datetime.now())
 
@@ -81,3 +80,7 @@ def calendar():
 @app.route("/form", methods=['POST'])
 def form():
     return render_template("input.html", time=datetime.now())
+
+@app.route("/events", methods=['GET'])
+def events():
+    return render_template("events.html", time=datetime.now())

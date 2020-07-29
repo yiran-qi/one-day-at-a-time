@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Your Recipe</title>
+        <link rel="stylesheet" type="text/css" href="static/css/all-events.css?q={{ time }}" />
+    </head>
+    <body>
+        <h1>Your {{query}} Recipe:</h1>
+        <ol>
+        {% for step in recipe %}
+            <li>{{ step }}</li>
+        {% endfor %}
+        </ol>
+    </body>
+</html>
