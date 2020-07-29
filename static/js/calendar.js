@@ -1,3 +1,4 @@
+console.log('connected')
 //global variables
 var monthEl = $(".c-main");
 var dataCel = $(".c-cal__cel");
@@ -27,8 +28,6 @@ var closeBtn = $(".js-event__close");
 var winCreator = $(".js-event__creator");
 var inputDate = $(this).data();
 today = year + "-" + month + "-" + day;
-​
-​
 // ------ set default events -------
 function defaultEvents(dataDay,dataName,dataNotes,classTag){
   var date = $('*[data-day='+dataDay+']');
@@ -37,15 +36,11 @@ function defaultEvents(dataDay,dataName,dataNotes,classTag){
   date.addClass("event");
   date.addClass("event--" + classTag);
 }
-​
-defaultEvents(today, 'YEAH!','Today is your day','important');
-defaultEvents('2017-12-25', 'MERRY CHRISTMAS','A lot of gift!!!!','festivity');
-defaultEvents('2017-05-04', "LUCA'S BIRTHDAY",'Another gifts...?','birthday');
-defaultEvents('2017-03-03', "MY LADY'S BIRTHDAY",'A lot of money to spent!!!!','birthday');
-​
-​
+// defaultEvents(today, 'YEAH!','Today is your day','important');
+// defaultEvents('2017-12-25', 'MERRY CHRISTMAS','A lot of gift!!!!','festivity');
+// defaultEvents('2017-05-04', "LUCA'S BIRTHDAY",'Another gifts...?','birthday');
+// defaultEvents('2017-03-03', "MY LADY'S BIRTHDAY",'A lot of money to spent!!!!','birthday');
 // ------ functions control -------
-​
 //button of the current day
 todayBtn.on("click", function() {
   if (month < indexMonth) {
@@ -56,7 +51,6 @@ todayBtn.on("click", function() {
     moveNext(step, true);
   }
 });
-​
 //higlight the cel of current day
 dataCel.each(function() {
   if ($(this).data("day") === today) {
@@ -64,7 +58,6 @@ dataCel.each(function() {
     fillEventSidebar($(this));
   }
 });
-​
 //window event creator
 addBtn.on("click", function() {
   winCreator.addClass("isVisible");
@@ -89,7 +82,6 @@ saveBtn.on("click", function() {
   var inputTag = $("select[name=tags]")
     .find(":selected")
     .text();
-​
   dataCel.each(function() {
     if ($(this).data("day") === inputDate) {
       if (inputName != null) {
@@ -105,12 +97,10 @@ saveBtn.on("click", function() {
       fillEventSidebar($(this));
     }
   });
-​
   winCreator.removeClass("isVisible");
   $("body").removeClass("overlay");
-  $("#form")[0].reset();
+  $("#addEvent")[0].reset();
 });
-​
 //fill sidebar event info
 function fillEventSidebar(self) {
   $(".c-aside__event").remove();
@@ -168,17 +158,12 @@ dataCel.on("click", function() {
   var thisMonth = $(this)
   .attr("data-day")
   .slice(5, 7);
-​
   fillEventSidebar($(this));
-​
   $(".c-aside__num").text(thisDay);
   $(".c-aside__month").text(monthText[thisMonth - 1]);
-​
   dataCel.removeClass("isSelected");
   thisEl.addClass("isSelected");
-​
 });
-​
 //function for move the months
 function moveNext(fakeClick, indexNext) {
   for (var i = 0; i < fakeClick; i++) {
@@ -210,7 +195,6 @@ function movePrev(fakeClick, indexPrev) {
     }
   }
 }
-​
 //months paginator
 function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
   switch (true) {
@@ -244,13 +228,10 @@ function buttonsPaginator(buttonId, mainClass, monthClass, next, prev) {
       break;
   }
 }
-​
 buttonsPaginator("#next", monthEl, ".c-paginator__month", false, true);
 buttonsPaginator("#prev", monthEl, ".c-paginator__month", true, false);
-​
 //launch function to set the current month
 moveNext(indexMonth - 1, false);
-​
 //fill the sidebar with current day
 $(".c-aside__num").text(day);
 $(".c-aside__month").text(monthText[month - 1]);

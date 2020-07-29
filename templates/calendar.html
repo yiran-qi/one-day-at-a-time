@@ -5,7 +5,7 @@
     <title>Calendar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
-    <link rel="stylesheet" type="text/css" href="static/css/calendar.css?q={{ time }}">
+    <link rel="stylesheet" type="text/css" href="static/css/Calendar3.css?q={{ time }}">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -20,7 +20,6 @@ function fill_table(month, month_length, indexMonth) {
     // begin the new month table
     document.write("<div class='c-main c-main-" + indexMonth + "'>");
     //document.write("<b>"+month+" "+year+"</b>")
-
     // column headings
     document.write("<div class='c-cal__row'>");
     day_title("Sun");
@@ -31,16 +30,14 @@ function fill_table(month, month_length, indexMonth) {
     day_title("Fri");
     day_title("Sat");
     document.write("</div>");
-
     // pad cells before first day of month
     document.write("<div class='c-cal__row'>");
     for (var i = 1; i < start_day; i++) {
       if (start_day > 7) {
       } else {
-        document.write("<div class='c-cal__cel'></div>");
+        document.write("<div class='c-cal__cel'> </div>");
       }
     }
-
     // fill the first week of days
     for (var i = start_day; i < 8; i++) {
       document.write(
@@ -55,7 +52,6 @@ function fill_table(month, month_length, indexMonth) {
       day++;
     }
     document.write("</div>");
-
     // fill the remaining weeks
     while (day <= month_length) {
       document.write("<div class='c-cal__row'>");
@@ -88,7 +84,6 @@ function fill_table(month, month_length, indexMonth) {
       // the first day of the next month
       start_day = i;
     }
-
     document.write("</div>");
   }
 </script>
@@ -116,7 +111,7 @@ function fill_table(month, month_length, indexMonth) {
       <span class="c-paginator__year">2020</span>
     </div>
     <div class="c-sort">
-      <a class="o-btn c-today__btn" href="javascript:;">TODAY</a>
+      <!-- <a class="o-btn c-today__btn" href="javascript:;">TODAY</a> -->
     </div>
   </div>
 </header>
@@ -132,17 +127,15 @@ function fill_table(month, month_length, indexMonth) {
       <div class="c-aside__eventList">
           {% if collection %}
             {% for event in collection %}
-                <p>{{ event.title }} | {{event.categories}} | {{event.entry_date}} | {{event.notes}}</p>
+                <p>{{ event.title }} {{event.categories}} {{event.entry_date}} {{event.notes}}</p>
             {% endfor %}
         {% endif %}
       </div>
     </div>
     <div class="c-cal__container c-calendar__style">
       <script>
-      
       // CHANGE the below variable to the CURRENT YEAR
       year = 2020;
-
       // first day of the week of the new year
       today = new Date("January 1, " + year);
       start_day = today.getDay() + 1;
@@ -161,8 +154,8 @@ function fill_table(month, month_length, indexMonth) {
       </script>
     </div>
   </div>
-
-  <div class="c-event__creator c-calendar__style js-event__creator">
+​
+  <!-- <div class="c-event__creator c-calendar__style js-event__creator">
     <a href="javascript:;" class="o-btn js-event__close">CLOSE<span class="fa fa-close"></span></a>
     <form action="" method="POST" id="form">
     
@@ -177,10 +170,10 @@ function fill_table(month, month_length, indexMonth) {
           <option value="Birthday">Birthday</option>
         </select>
     </form>
-    <br>
-    <a href="javascript:;" class="o-btn js-event__save">SAVE<span class="fa fa-save"></span></a>
+    <br> -->
+    <!-- <a href="javascript:;" class="o-btn js-event__save">SAVE<span class="fa fa-save"></span></a>
   </div>
-</div>
+</div> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.core.min.js'></script><script  src="{{ url_for('static', filename='js/calendar.js') }}"></script>
 </body>
