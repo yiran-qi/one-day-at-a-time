@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<<<<<<< HEAD
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+	<link rel="stylesheet" type="text/css" href="static/css/Calendar3.css?q={{ time }}">
+=======
     <meta charset="UTF-8">
     <title>Calendar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
     <link rel="stylesheet" type="text/css" href="static/css/calendar-3.css?q={{ time }}">
+>>>>>>> 4114454f1839d9de8aad473c8ddae173e0eeda28
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<script>
-  // fill the month table with column headings
+	<!-- partial:index.partial.html -->
+	<script>
+		// fill the month table with column headings
 function day_title(day_name) {
     document.write("<div class='c-cal__col'>" + day_name + "</div>");
   }
@@ -86,55 +96,67 @@ function fill_table(month, month_length, indexMonth) {
     }
     document.write("</div>");
   }
-</script>
-<header>
-  <div class="wrapper">
-    <div class="c-monthyear">
-    <div class="c-month">
-        <span id="prev" class="prev fa fa-angle-left" aria-hidden="true"></span>
-        <div id="c-paginator">
-          <span class="c-paginator__month">JANUARY</span>
-          <span class="c-paginator__month">FEBRUARY</span>
-          <span class="c-paginator__month">MARCH</span>
-          <span class="c-paginator__month">APRIL</span>
-          <span class="c-paginator__month">MAY</span>
-          <span class="c-paginator__month">JUNE</span>
-          <span class="c-paginator__month">JULY</span>
-          <span class="c-paginator__month">AUGUST</span>
-          <span class="c-paginator__month">SEPTEMBER</span>
-          <span class="c-paginator__month">OCTOBER</span>
-          <span class="c-paginator__month">NOVEMBER</span>
-          <span class="c-paginator__month">DECEMBER</span>
-        </div>
-        <span id="next" class="next fa fa-angle-right" aria-hidden="true"></span>
-      </div>
-      <span class="c-paginator__year">2020</span>
-    </div>
-    <div class="c-sort">
-      <!-- <a class="o-btn c-today__btn" href="javascript:;">TODAY</a> -->
-    </div>
-  </div>
-</header>
-<div class="wrapper">
-  <div class="c-calendar">
-    <div class="c-calendar__style c-aside">
-        <form action="/form" method="post">
-            <button class="c-add o-btn js-event__add" > Add Event <span class="fa fa-plus"></span></a></button>
-        </form>
-      <div class="c-aside__day">
-        <span class="c-aside__month"></span> <span class="c-aside__num"></span>
-      </div>
-      <div class="c-aside__eventList">
-          {% if collection %}
-            {% for event in collection %}
-                <p>{{ event.title }} {{event.categories}} {{event.entry_date}} {{event.notes}}</p>
-            {% endfor %}
-        {% endif %}
-      </div>
-    </div>
-    <div class="c-cal__container c-calendar__style">
-      <script>
-      // CHANGE the below variable to the CURRENT YEAR
+	</script>
+	<header>
+		<div class="wrapper">
+			<div class="c-monthyear">
+				<div class="c-month">
+					<span id="prev" class="prev fa fa-angle-left" aria-hidden="true"></span>
+					<div id="c-paginator">
+						<span class="c-paginator__month">JANUARY</span>
+						<span class="c-paginator__month">FEBRUARY</span>
+						<span class="c-paginator__month">MARCH</span>
+						<span class="c-paginator__month">APRIL</span>
+						<span class="c-paginator__month">MAY</span>
+						<span class="c-paginator__month">JUNE</span>
+						<span class="c-paginator__month">JULY</span>
+						<span class="c-paginator__month">AUGUST</span>
+						<span class="c-paginator__month">SEPTEMBER</span>
+						<span class="c-paginator__month">OCTOBER</span>
+						<span class="c-paginator__month">NOVEMBER</span>
+						<span class="c-paginator__month">DECEMBER</span>
+					</div>
+					<span id="next" class="next fa fa-angle-right" aria-hidden="true"></span>
+				</div>
+				<span class="c-paginator__year">2020</span>
+			</div>
+			<div class="c-sort">
+				<form action="/logout" method="post">
+					<button class="logout" > Logout </a></button>
+				</form>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper">
+		<div class="c-calendar">
+			<div class="c-calendar__style c-aside">
+				<form action="/form" method="post">
+					<button class="c-add o-btn js-event__add" > Add Event <span class="fa fa-plus"></span></a></button>
+				</form>
+				<form action="/months" method="post">
+					<input id="months" type="date" name="months" value="">
+                    <button class="go" > Go </button>
+				
+					<div class="c-aside__day">
+						<span class="c-aside__month"></span> <span class="c-aside__num"></span>
+					</div>
+					<div class="c-aside__eventList">
+                        {{ collection|join(' ') }}
+						{% if collection %}
+						{% for event in collection %}
+                        {% for key,val in event.items()%}
+                        <p> {{ val }} </p>
+                        {% endfor %}
+						<!-- <p>{{ event.title }} </p> -->
+						{% endfor %} 
+
+						{% endif %}
+					</div>
+                </form>
+			</div>
+			<div class="c-cal__container c-calendar__style">
+				<script>
+					// CHANGE the below variable to the CURRENT YEAR
       year = 2020;
       // first day of the week of the new year
       today = new Date("January 1, " + year);
@@ -151,30 +173,13 @@ function fill_table(month, month_length, indexMonth) {
       fill_table("October", 31, "10");
       fill_table("November", 30, "11");
       fill_table("December", 31, "12");
-      </script>
-    </div>
-  </div>
-​
-  <!-- <div class="c-event__creator c-calendar__style js-event__creator">
-    <a href="javascript:;" class="o-btn js-event__close">CLOSE<span class="fa fa-close"></span></a>
-    <form action="" method="POST" id="form">
-    
-      <input placeholder="Event Name" type="text" name="name">
-      <input type="date" name="date">
-      <textarea placeholder="Notes" name="notes" cols="30" rows="10"></textarea>
-      <select name="tags">
-          <option value="Class">Class</option>
-          <option value="Assignment">Assignment</option>
-          <option value="Extracurricular">Extracurricular</option>
-          <option value="Social">Social</option>
-          <option value="Birthday">Birthday</option>
-        </select>
-    </form>
-    <br> -->
-    <!-- <a href="javascript:;" class="o-btn js-event__save">SAVE<span class="fa fa-save"></span></a>
-  </div>
-</div> -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.core.min.js'></script><script  src="{{ url_for('static', filename='js/calendar.js') }}"></script>
+				</script>
+			</div>
+		</div>
+		​
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.core.min.js'></script>
+		<script src="{{ url_for('static', filename='js/calendar.js') }}"></script>
 </body>
+
 </html>
