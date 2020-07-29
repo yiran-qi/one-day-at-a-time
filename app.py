@@ -71,31 +71,30 @@ def calendar():
         # if "user" in session:
         #     collection.find({"name": session["user"]})
         collection = events.find({})
-        print(type(collection))
+        # print(type(collection))
+        # print(list(collection))
         # Add to the database
         events.insert({"title": title, "categories": categories, "entry_date": entry_date, "notes": notes})
         # Return data to user
-        return render_template("calendar.html", collection=collection, time=datetime.now())
+        return render_template("calendar.html", collection=list(collection), time=datetime.now())
 
 
 @app.route("/form", methods=['POST'])
 def form():
     return render_template("input.html", time=datetime.now())
 
-<<<<<<< HEAD
-@app.route("/enter", methods=['POST'])
+@app.route("/enter", methods=['GET', 'POST'])
 def enter():
-    if request.method == "GET":
-        return render_template("calendar.html", time=datetime.now())
-    else:
-        # Connect to a database
-        events = mongo.db.events
-        # if "user" in session:
-        #     collection.find({"name": session["user"]})
-        collection = events.find({})
-        # Add to the database
-        # Return data to user
-        return render_template("calendar.html", collection=collection, time=datetime.now())
+    # Connect to a database
+    events = mongo.db.events
+    # if "user" in session:
+    #     collection.find({"name": session["user"]})
+    collection = events.find({})
+    # print(type(collection))
+    # print(list(collection))
+    # Add to the database
+    # Return data to user
+    return render_template("calendar.html", collection=list(collection), time=datetime.now())
 
 @app.route("/logout", methods=['POST'])
 def logout():
@@ -104,23 +103,32 @@ def logout():
 @app.route("/months", methods=['GET', 'POST'])
 def months():
     if request.method == "GET":
-        return render_template("calendar.html", time=datetime.now())
+        # Connect to a database
+        events = mongo.db.events
+        # if "user" in session:
+        # collection.find({"name": session["user"]})
+        collection = events.find({})
+        # print(type(collection))
+        # print(list(collection))
+        # Add to the database
+        # Return data to user
+        return render_template("calendar.html", collection=list(collection), time=datetime.now())
     else:
         months = request.form["months"]
         # Connect to a database
         events = mongo.db.events
         collection = events.find({'entry_date': months})
-        print(months)
-        print(type(collection))
-        print(list(collection))
+        # print(months)
+        # print(type(collection))
+        # print(list(collection))
         # if "user" in session:
-        #     collection.find({"name": session["user"]})
+        # collection.find({"name": session["user"]})
         # collection = months.find({})
         # Add to the database
         # collection.insert({"months": months})
         # Return data to user
-        return render_template("calendar.html", collection=collection, time=datetime.now())
-=======
+        return render_template("calendar.html", collection=list(collection), time=datetime.now())
+
 @app.route("/events", methods=['GET'])
 def events():
     return render_template("events.html", time=datetime.now())
