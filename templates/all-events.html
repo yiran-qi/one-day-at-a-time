@@ -1,13 +1,13 @@
 <html>
     <head>
-        <title>Your Recipe</title>
+        <title>All Events</title>
         <link rel="stylesheet" type="text/css" href="static/css/all-events.css?q={{ time }}" />
     </head>
     <body>
-        <h1>Your {{query}} Recipe:</h1>
+        <h1>All events in {{query}}</h1>
         <ol>
-        {% for step in recipe %}
-            <li>{{ step }}</li>
+        {% for event in recipe %}
+            <li>{{ event }}</li>
         {% endfor %}
         </ol>
     </body>
