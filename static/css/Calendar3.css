@@ -138,9 +138,9 @@ header > .wrapper {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  color: #3f4441;
+  color: black;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 20px;
 }
 header > .wrapper a {
   color: #FFF4EC;
@@ -258,7 +258,8 @@ header > .wrapper a {
   line-height: 80px;
   padding: 0 20px;
 }
-.o-btn {
+.o-btn,
+.logout {
   display: inline-block;
   padding: 0 10px;
   line-height: 30px;
@@ -447,7 +448,7 @@ header > .wrapper a {
   transform: translate(-50%, calc(50% + 20px/2));
   -webkit-transform: translate(-50%, calc(50% + 20px/2));
 }
-.event--birthday:before {
+/* .event--birthday:before {
   background-color: #FACC2E;
 }
 .event--festivity:before {
@@ -455,14 +456,14 @@ header > .wrapper a {
 }
 .event--important:before {
   background-color: #F57170;
-}
+} */
 .c-aside {
   width: 300px;
   padding: 20px;
 }
 .c-aside__day {
-  font-size: 28px;
-  margin: 50px 0;
+    font-size: 28px;
+    margin-bottom: 20 px;
 }
 .c-aside__day .c-aside__num {
   font-family: 'Staatliches', cursive;
@@ -538,7 +539,6 @@ header > .wrapper a {
   opacity: 1;
   visibility: visible;
 }
-input,
 textarea,
 select {
   -webkit-appearance: none;
@@ -572,4 +572,24 @@ button {
     font-family: 'Staatliches', cursive;
     font-weight: 400px;
     color: black;
+}
+
+input {
+    display: inline-block;
+  margin-top: 10px;
+    margin-bottom: 10px;
+  line-height: 30px;
+ font-size: 18px;
+ font-family: 'Staatliches', cursive;
+  font-weight: 400px;
+  color: black;
+  text-align: center;
+  height: 30px;
+  background-color: #FFE9E8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
