@@ -2,19 +2,19 @@
 <html>
 
 <head>
-<<<<<<< HEAD
+
 	<meta charset="UTF-8">
 	<title>Calendar</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
 	<link rel="stylesheet" type="text/css" href="static/css/Calendar3.css?q={{ time }}">
-=======
+
     <meta charset="UTF-8">
     <title>Calendar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
     <link rel="stylesheet" type="text/css" href="static/css/calendar-3.css?q={{ time }}">
->>>>>>> 4114454f1839d9de8aad473c8ddae173e0eeda28
+
 </head>
 
 <body>
@@ -141,13 +141,13 @@ function fill_table(month, month_length, indexMonth) {
 						<span class="c-aside__month"></span> <span class="c-aside__num"></span>
 					</div>
 					<div class="c-aside__eventList">
-                        {{ collection|join(' ') }}
+                        <!-- {{ collection|join(' ') }} -->
 						{% if collection %}
 						{% for event in collection %}
-                        {% for key,val in event.items()%}
-                        <p> {{ val }} </p>
-                        {% endfor %}
-						<!-- <p>{{ event.title }} </p> -->
+                        <!-- {% for key,val in event.items()%}
+                        <p> {{ key }} </p>
+                        {% endfor %} -->
+						<p>{{ event.title }} {{ event.categories }} {{ event.entry_date }} {{ event.notes }} </p>
 						{% endfor %} 
 
 						{% endif %}
