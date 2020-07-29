@@ -86,15 +86,15 @@ def form():
 @app.route("/enter", methods=['GET', 'POST'])
 def enter():
     # Connect to a database
-    events = mongo.db.events
+    # events = mongo.db.events
     # if "user" in session:
     #     collection.find({"name": session["user"]})
-    collection = events.find({})
+    # collection = events.find({})
     # print(type(collection))
     # print(list(collection))
     # Add to the database
     # Return data to user
-    return render_template("calendar.html", collection=list(collection), time=datetime.now())
+    return render_template("calendar.html", time=datetime.now())
 
 @app.route("/logout", methods=['POST'])
 def logout():
