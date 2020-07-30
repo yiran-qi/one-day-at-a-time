@@ -5,17 +5,20 @@
         <link rel="stylesheet" type="text/css" href="static/css/all-events.css?q={{ time }}" />
     </head>
     <body>
-        <h1>All events in {{ query }}</h1>
+        <h1>All events in {{ zipcode }}</h1>
+        <div class="row">
         {% for event in list_of_events %}
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src= "{{ event.image }}" alt="Card image cap">
+        <div class="col-4">
+        <div class="card d-flex align-items-stretch">
+            <img class="card-img-top" src="{{ event.image }}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{ event.name }}</h5>
-                <p class="card-text">{{ event.info }}</p>
-                <a href="{{ event.url }}" class="btn btn-primary">Get Tickets</a>
+            <h5 class="card-title">{{ event.name }}</h5>
+            <p class="card-text">{{ event.info }}</p>
+            <a href="{{ event.url }}" class="btn btn-primary">Get Tickets</a>
             </div>
         </div>
+        </div>
         {% endfor %}
-
+        </div>
     </body>
 </html>
