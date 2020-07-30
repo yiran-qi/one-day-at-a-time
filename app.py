@@ -10,6 +10,7 @@ import os
 from dotenv import load_dotenv
 from flask import session
 import bcrypt
+from model import getEvents
 # -- Initialization section --
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
@@ -22,6 +23,7 @@ MONGO_PASSWORD = os.getenv("MONGO_PASSWORD")
 app.config['MONGO_DBNAME'] = 'planner'
 # URI of database
 app.config['MONGO_URI'] = f"mongodb+srv://{MONGO_USER}:{MONGO_PASSWORD}@cluster0.sw1ze.mongodb.net/planner?retryWrites=true&w=majority"
+app.config['EVENT_KEY'] = os.getenv('EVENT_KEY')
 mongo = PyMongo(app)
 # -- Routes section --
 
@@ -129,7 +131,12 @@ def months():
         # Return data to user
         return render_template("calendar.html", collection=list(collection), time=datetime.now())
 
-@app.route("/events", methods=['GET'])
+@app.route("/events", methods=["GET", "POST"])
 def events():
-    return render_template("events.html", time=datetime.now())
-
+    if request.method == "GET":
+        return render_template("events.html", time=datetime.now())
+    else:
+        key = app.config["EVENT_KEY"]
+        query = request.form["city"]
+        list_of_events = getEvents(query, key)
+        return render_template("all-events.html", time = datetime.now(), list_of_events = list_of_events)

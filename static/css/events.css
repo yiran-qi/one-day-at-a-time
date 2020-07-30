@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap');
+
+.fintech-focus {
+    max-width: 90px; 
+    height: auto; 
+}
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -311,6 +318,11 @@ legend {
   /* 3 */
   white-space: normal;
   /* 1 */
+}
+
+#title {
+    font-family: 'Staatliches', cursive;
+    font-size: 70px;
 }
 
 /**
@@ -869,7 +881,7 @@ legend {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  background: url("../images/Searchs_013.png");
+  background: url("../images/city.png");
   background-size: cover;
   background-position: center center;
   padding: 15px;
@@ -880,6 +892,7 @@ legend {
   width: 100%;
   max-width: 914px;
   margin: 0;
+  transform: translateY(-50%);
 }
 
 .s013 form fieldset {
