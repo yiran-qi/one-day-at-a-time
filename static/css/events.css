@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -6,7 +8,10 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-
+.navbar-brand, .nav-link {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
 /* Sections
    ========================================================================== */
 /**
