@@ -142,9 +142,4 @@ def events():
         key = app.config["EVENT_KEY"]
         list_of_events = getEvents(zipcode, category, key)
         list_of_events = list_of_events["events"]
-<<<<<<< Updated upstream
         return render_template("all-events.html", time = datetime.now(), list_of_events = list_of_events, zipcode=zipcode)
-=======
-        # print(list_of_events)
-        return render_template("all-events.html", time = datetime.now(), list_of_events = list_of_events)
->>>>>>> Stashed changes
