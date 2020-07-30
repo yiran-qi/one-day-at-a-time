@@ -1,8 +1,6 @@
 import requests
 from collections import defaultdict
 
-import ticketpy
-
 list_of_events = defaultdict(list)
 def getEvents(query, key):
     query = f"https://app.ticketmaster.com/discovery/v2/events.json?apikey={key}&postalCode={query}"

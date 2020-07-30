@@ -46,34 +46,35 @@
         <fieldset>
           <legend id="title">FIND YOUR EVENT</legend>
         </fieldset>
-        <div class="inner-form">
-          <div class="left">
-            <div class="input-wrap first">
-              <div class="input-field first">
-                <label for="city">WHERE</label>
-                <input type="text" name="city" placeholder="City" />
-              </div>
-            </div>
-            <div class="input-wrap second">
-              <div class="input-field second">
-                <label>WHAT</label>
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
-                    <option>Music</option>
-                    <option>Sports</option>
-                    <option>Arts & Theater</option>
-                    <option>Family</option>
-                    <option>Film</option>
-                    <option>Miscellaneous</option>
-                    <label for="entry_date">Categories</label><br>
-                  </select>
+        <form action="/events" method="post">
+            <div class="inner-form">
+            <div class="left">
+                <div class="input-wrap first">
+                <div class="input-field first">
+                    <label for="city">WHERE</label>
+                    <input type="text" name="city" placeholder="City" />
                 </div>
-              </div>
+                </div>
+                <div class="input-wrap second">
+                <div class="input-field second">
+                    <label>WHAT</label>
+                    <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                        <option>Music</option>
+                        <option>Sports</option>
+                        <option>Arts & Theater</option>
+                        <option>Family</option>
+                        <option>Film</option>
+                        <option>Miscellaneous</option>
+                        <label for="entry_date">Categories</label><br>
+                    </select>
+                    </div>
+                </div>
+                </div>
             </div>
-          </div>
-          <button class="btn-search" type="button">SEARCH</button>
-        </div>
-      </form>
+            <button class="btn-search" type="button">SEARCH</button>
+            </div>
+        </form>
     </div>
 
 </body>
