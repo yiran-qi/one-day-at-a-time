@@ -37,51 +37,54 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/index"> Home </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/events"> Events <span class="sr-only">(current)</span></a>
-            </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="s013">
-      <form action="/events" method="post">
-        <fieldset>
-          <legend id="title">FIND YOUR EVENT</legend>
-        </fieldset>
-        <div class="inner-form">
-          <div class="left">
-            <div class="input-wrap first">
-              <div class="input-field first">
-                <div class="form-row">
-                    <div class="col col-md-5">
-                    <label for="city">WHERE</label>
-                    <input type="text" class="form-control" name="city" placeholder="Zip Code">
-                    </div>
-                    <div class="input-field second">
-                    <div class="col col-md-12">
-                    <label for="category">WHAT</label>
-                    <!-- <div class="form-group col-md-12"> -->
-                        <select id="inputState" class="form-control form-group col-md-12" name="category">
-                            <option selected>Category...</option>
-                            <option>Music</option>
-                            <option>Sports</option>
-                            <option>Arts & Theater</option>
-                            <option>Family</option>
-                            <option>Film</option>
-                            <option>Miscellaneous</option>
-                        </select>
-                    </div>
-                    </div>
-            </div>
-            <div class="col col-md-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="/index"> Home </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/events"> Events <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	<div class="s013">
+		<form action="/events" method="post">
+			<fieldset>
+				<legend id="title">FIND YOUR EVENT</legend>
+			</fieldset>
+			<form action="/events" method="post">
+				<div class="inner-form">
+					<div class="left">
+						<div class="input-wrap first">
+							<div class="input-field first">
+								<label for="city">WHERE</label>
+								<input type="text" name="city" placeholder="City" />
+              </div>
+							</div>
+							<div class="input-wrap second">
+								<div class="input-field second">
+									<label>WHAT</label>
+									<div class="input-select">
+										<select data-trigger="" name="choices-single-defaul">
+                    <option>Music</option>
+                    <option>Sports</option>
+                    <option>Arts & Theater</option>
+                    <option>Family</option>
+                    <option>Film</option>
+                    <option>Miscellaneous</option>
+                    <label for="entry_date">Categories</label><br>
+                  </select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn-search" type="button">SEARCH</button>
+					</div>
+			</form>
+	</div>
+
 </body>
 
 </html>
