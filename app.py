@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 from flask import session
 import bcrypt
 from model import getEvents
+
 # -- Initialization section --
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
@@ -136,7 +137,10 @@ def events():
     if request.method == "GET":
         return render_template("events.html", time=datetime.now())
     else:
+        zipcode = request.form["city"]
+        category = request.form["category"]
         key = app.config["EVENT_KEY"]
-        query = request.form["city"]
-        list_of_events = getEvents(query, key)
+        list_of_events = getEvents(zipcode, category, key)
+        list_of_events = list_of_events["events"]
+        # print(list_of_events)
         return render_template("all-events.html", time = datetime.now(), list_of_events = list_of_events)
