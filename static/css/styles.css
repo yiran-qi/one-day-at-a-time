@@ -29,7 +29,7 @@ body, html {
   height: 100%;
 
   /* Position and center the image to scale nicely on all screens */
-  background-position: 200px -15px;
+  background-position: 200px -30px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -39,7 +39,7 @@ body, html {
   margin-left: 10px;
   padding: 15px;
   position: absolute;
-  top: 5%;
+  top: 3%;
   left: 10%;
   opacity: 0.9;
 }
