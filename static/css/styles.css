@@ -113,3 +113,8 @@ label {
 .form-group {
     border-radius: 25px;
 }
+
+.navbar-brand, .nav-link {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}

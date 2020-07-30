@@ -593,3 +593,63 @@ input {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.output:nth-child(1) {
+    border-radius: 20px;
+    background-color: #FF9AA2;
+    text-align: center;
+}
+
+.output:nth-child(2) {
+    border-radius: 20px;
+    background-color: #FFB7B2;
+    text-align: center;
+}
+
+.output:nth-child(3) {
+    border-radius: 20px;
+    background-color: #E2F0CB;
+    text-align: center;
+}
+
+.output:nth-child(4) {
+    border-radius: 20px;
+    background-color: #B5EAD7;
+    text-align: center;
+}
+
+.output:nth-child(5) {
+    border-radius: 20px;
+    background-color: #C7CEEA;
+    text-align: center;
+}
+
+.output:nth-child(6) {
+    border-radius: 20px;
+    background-color: #FF9AA2;
+    text-align: center;
+}
+
+.output:nth-child(7) {
+    border-radius: 20px;
+    background-color: #FFB7B2;
+    text-align: center;
+}
+
+.output:nth-child(8) {
+    border-radius: 20px;
+    background-color: #E2F0CB;
+    text-align: center;
+}
+
+.output:nth-child(9) {
+    border-radius: 20px;
+    background-color: #B5EAD7;
+    text-align: center;
+}
+
+.output:nth-child(10) {
+    border-radius: 20px;
+    background-color: #C7CEEA;
+    text-align: center;
+}
