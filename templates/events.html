@@ -26,14 +26,13 @@
         <a class="navbar-brand" href="/index">
             <img src="/static/images/fintech-focus.png" class="fintech-focus" alt="">
         </a>
-        <a class="navbar-brand" href="/index">Planner</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/index"> Login </a>
+                <a class="nav-link" href="/index"> Home </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/events"> Events <span class="sr-only">(current)</span></a>
@@ -47,34 +46,34 @@
           <legend id="title">FIND YOUR EVENT</legend>
         </fieldset>
         <form action="/events" method="post">
-            <div class="inner-form">
-            <div class="left">
-                <div class="input-wrap first">
-                <div class="input-field first">
-                    <label for="city">WHERE</label>
-                    <input type="text" name="city" placeholder="City" />
-                </div>
-                </div>
-                <div class="input-wrap second">
-                <div class="input-field second">
-                    <label>WHAT</label>
-                    <div class="input-select">
-                    <select data-trigger="" name="choices-single-defaul">
-                        <option>Music</option>
-                        <option>Sports</option>
-                        <option>Arts & Theater</option>
-                        <option>Family</option>
-                        <option>Film</option>
-                        <option>Miscellaneous</option>
-                        <label for="entry_date">Categories</label><br>
-                    </select>
-                    </div>
-                </div>
-                </div>
+        <div class="inner-form">
+          <div class="left">
+            <div class="input-wrap first">
+              <div class="input-field first">
+                <label for="city">WHERE</label>
+                <input type="text" name="city" placeholder="City" />
+              </div>
             </div>
-            <button class="btn-search" type="button">SEARCH</button>
+            <div class="input-wrap second">
+              <div class="input-field second">
+                <label>WHAT</label>
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option>Music</option>
+                    <option>Sports</option>
+                    <option>Arts & Theater</option>
+                    <option>Family</option>
+                    <option>Film</option>
+                    <option>Miscellaneous</option>
+                    <label for="entry_date">Categories</label><br>
+                  </select>
+                </div>
+              </div>
             </div>
-        </form>
+          </div>
+          <button class="btn-search" type="button">SEARCH</button>
+        </div>
+      </form>
     </div>
 
 </body>
