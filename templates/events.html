@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="author" content="colorlib.com">
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" type="text/css" href="static/css/events.css?q={{ time }}">
-    
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="author" content="colorlib.com">
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- import the webpage's stylesheet -->
+	<link rel="stylesheet" type="text/css" href="static/css/events.css?q={{ time }}">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/index">
-            <img src="/static/images/fintech-focus.png" class="fintech-focus" alt="">
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet" />
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light"> <a class="navbar-brand" href="/index">
+            <img src="/static/images/ODAT2.png" class="fintech-focus" alt="" <h1> One Day at a Time </h1>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/index"> Home </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/events"> Events <span class="sr-only">(current)</span></a>
-            </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="s013">
-      <form action="/events" method="post">
-        <fieldset>
-          <legend id="title">FIND YOUR EVENT</legend>
-        </fieldset>
-        <form action="/events" method="post">
-        <div class="inner-form">
-          <div class="left">
-            <div class="input-wrap first">
-              <div class="input-field first">
-                <label for="city">WHERE</label>
-                <input type="text" name="city" placeholder="City" />
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="/index"> Home </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/events"> Events <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	<div class="s013">
+		<form action="/events" method="post">
+			<fieldset>
+				<legend id="title">FIND YOUR EVENT</legend>
+			</fieldset>
+			<form action="/events" method="post">
+				<div class="inner-form">
+					<div class="left">
+						<div class="input-wrap first">
+							<div class="input-field first">
+								<label for="city">WHERE</label>
+								<input type="text" name="city" placeholder="City" />
               </div>
-            </div>
-            <div class="input-wrap second">
-              <div class="input-field second">
-                <label>WHAT</label>
-                <div class="input-select">
-                  <select data-trigger="" name="choices-single-defaul">
+							</div>
+							<div class="input-wrap second">
+								<div class="input-field second">
+									<label>WHAT</label>
+									<div class="input-select">
+										<select data-trigger="" name="choices-single-defaul">
                     <option>Music</option>
                     <option>Sports</option>
                     <option>Arts & Theater</option>
@@ -67,14 +75,15 @@
                     <option>Miscellaneous</option>
                     <label for="entry_date">Categories</label><br>
                   </select>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="btn-search" type="button">SEARCH</button>
-        </div>
-      </form>
-    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn-search" type="button">SEARCH</button>
+					</div>
+			</form>
+	</div>
 
 </body>
+
 </html>

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap');
 
 .fintech-focus {
-    max-width: 90px; 
+    max-width: 110px; 
     height: auto; 
+    padding-left: 10px;
 }
 
 html {
@@ -13,10 +14,21 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-.navbar-brand, .nav-link {
+.nav-link {
     font-family: 'Staatliches', cursive;
     font-size: 20px;
 }
+
+.navbar-brand {
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  padding-right: 18px;
+}
+
 /* Sections
    ========================================================================== */
 /**
