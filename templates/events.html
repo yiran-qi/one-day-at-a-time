@@ -49,7 +49,7 @@
         </div>
     </nav>
     <div class="s013">
-      <form action="/events" method="post">
+    <form action="/events" method="post" class="form">
         <fieldset>
           <legend id="title">FIND YOUR EVENT</legend>
         </fieldset>
@@ -65,7 +65,6 @@
                     <div class="input-field second">
                     <div class="col col-md-12">
                     <label for="category">WHAT</label>
-                    <!-- <div class="form-group col-md-12"> -->
                         <select id="inputState" class="form-control form-group col-md-12" name="category">
                             <option selected>Category...</option>
                             <option>Music</option>
@@ -76,16 +75,9 @@
                             <option>Miscellaneous</option>
                         </select>
                     </div>
-
                     </div>
-                    <div class="col col-md-2">
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">Submit</button>
-                    </div>
-                    </div>
-
-        </form>
-
+                    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
 </body>
-
 </html>

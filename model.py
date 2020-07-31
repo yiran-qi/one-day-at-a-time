@@ -13,4 +13,4 @@ def getEvents(zipcode, category, key):
         list_of_events["events"].append({"name": name, "info": info, "image": image, "url": url})
     return list_of_events
 
-print(getEvents("28262", "Music", "oArnE5AzUFNrwKGW5FNoP3vAaxqXvXPX"))
+# print(getEvents("28262", "Music", "oArnE5AzUFNrwKGW5FNoP3vAaxqXvXPX"))
